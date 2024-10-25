@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        
+            Server-Side Request Forgery (SSRF)
+                
+    </title>
+    <meta name="description" content="A type of security vulnerability that allows an attacker to induce a server to make unintended requests to other internal or external resources.">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+    Boost Brand Authority &amp; Leads: GrackerAI for Cybersecurity SaaS
+</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600&display=swap"
+            rel="stylesheet">
+        
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+            rel="stylesheet">
+        
+            
+                <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.gracker.ai/style.min.css">
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+                <!-- and it's easy to individually load additional languages -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+                <script>hljs.highlightAll();</script>
+
+                <style>
+                    :root {
+                        --primary-color: #000000;
+                        --secondary-color: #ffffff;
+                        --background-color: #f5f5f5;
+                        --text-color: #333333;
+                        --accent-color: #ff5733;
+                        --font-primary: Bricolage Grotesque, Arial, sans-serif;
+                        --font-secondary: Poppins, Arial, sans-serif;
+                    }
+                </style>
+</head>
+
+<body>
+    <header class="header group" id="main-header">
+    <div class="navigation">
+        <div class="header-item item-left">
+            <div class="logo"><a href="/"><img src="https://sun.com/_astro/logo-white.DuNP12gY_Z22gpAz.svg" 
+                onerror="this.onerror=null; this.src='https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png'" 
+                alt="Primary Image"  height="40" /></a></div>
+        </div>
+
+        <div class="header-item item-center">
+            <div class="menu-overlay"></div>
+            <nav class="menu">
+                <div class="mobile-menu-head">
+                    <div class="go-back">
+                        &lt;
+                    </div>
+                    <div class="current-menu-title"></div>
+                    <div class="mobile-menu-close">&times;</div>
+                </div>
+                <ul class="menu-main">
+                    <li>
+                        <a href="sun.com">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://portal.gracker.ai/" class="btn btn-primary show-in-mobile demo-btn">
+                            Get started — it&#39;s free
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-item item-right nav-right">
+            <a href="https://portal.gracker.ai/" class="btn btn-ghost dark hide-in-mobile">
+                Get started — it&#39;s free
+            </a>
+            <div class="mobile-menu-trigger">
+                <span></span>
+            </div>
+        </div>
+
+
+
+    </div>
+</header>
+        <main class="homeMainInner">
+            <section class="hero">
+                <div>
+                    <ul class="breadcrumb">
+                        <li><a href="/">Home</a></li>
+                        <li class="seprator">/</li>
+                
+                        
+                
+                        <li>Server-Side Request Forgery (SSRF)</li>
+                    </ul>
+                    <div class="title header">
+                        <h1>Server-Side Request Forgery (SSRF)</h1>
+                    </div>
+                </div>
+                
+            </section>
+            <section class="category-section page-content">
+                <div class="content has-space">
+                    <p>
+                        A type of security vulnerability that allows an attacker to induce a server to make unintended requests to other internal or external resources.
+                    </p>
+                    
+                        <h2>Description</h2>
+
+                            
+                        <p>Server-Side Request Forgery (SSRF) is a security vulnerability that occurs when a web application or server is tricked into making HTTP requests on behalf of an attacker. Typically, SSRF exploits arise when a server accepts user input to fetch data from a given URL without proper validation and sanitization. This allows attackers to manipulate the input to make the server request resources that it should not access, such as internal APIs, databases, or other services. For example, an attacker could exploit an SSRF vulnerability to access sensitive metadata in cloud environments or to enumerate internal network services that are not exposed to the public internet. As a result, SSRF can lead to unauthorized information disclosure, denial of service, or even remote code execution if the server is misconfigured. Mitigating SSRF vulnerabilities involves validating and sanitizing user input, implementing strict access controls, and using whitelisting techniques to limit the URLs the server can request.</p>
+
+                            
+                        <h2>Examples</h2>
+
+                            
+                        <ul>
+<li>An attacker exploits SSRF to access internal AWS metadata endpoints to retrieve sensitive information such as IAM credentials.</li>
+<li>A web application that fetches thumbnails from user-provided URLs is exploited by an attacker to access internal services that should not be publicly accessible.</li>
+</ul>
+
+                            
+                        <h2>Additional Information</h2>
+
+                            
+                        <ul>
+<li>SSRF vulnerabilities are often found in applications that process user-supplied URLs, such as image upload services, URL shorteners, or webhooks.</li>
+<li>Preventing SSRF requires careful design, including implementing network segmentation and limiting outbound connections from servers.</li>
+</ul>
+
+                            
+                        <h2>References</h2>
+
+                            
+                        <ul>
+<li><a href="https://owasp.org/www-community/attacks/Server_Side_Request_Forgery">Server Side Request Forgery</a></li>
+<li><a href="https://ctf101.org/web-exploitation/server-side-request-forgery/what-is-server-side-request-forgery/">Server Side Request Forgery (SSRF)¶</a></li>
+<li><a href="https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/">A10:2021 – Server-Side Request Forgery (SSRF)</a></li>
+<li><a href="https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_(SSRF)/">A10 Server Side Request Forgery (SSRF)</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html">Server-Side Request Forgery Prevention Cheat Sheet¶</a></li>
+<li><a href="https://www.geeksforgeeks.org/server-side-request-forgery-ssrf-in-depth/">Server Side Request Forgery (SSRF) in Depth - GeeksforGeeks</a></li>
+<li><a href="https://owasp.org/API-Security/editions/2023/en/0xa7-server-side-request-forgery/">API7:2023 Server Side Request Forgery</a></li>
+<li><a href="https://dev.to/sre_panchanan/owasp-api72023-server-side-request-forgeryssrf-2e8b">OWASP API7:2023 Server Side Request Forgery(SSRF)</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/19-Testing_for_Server-Side_Request_Forgery">WSTG - v4.2</a></li>
+<li><a href="https://www.slideshare.net/RonanDunne1/server-side-request-forgery-ssrf">Server Side Request Forgery - ssrf</a></li>
+</ul>
+
+                            
+                </div>
+            </section>
+
+            
+
+
+        </main>
+        <script>
+            // Get all h2 elements
+            const h2Elements = document.querySelectorAll('h2');
+
+            // Loop through the h2 elements and find the one with the text 'References'
+            h2Elements.forEach(h2 => {
+                if (h2.textContent.trim() === 'References') {
+                    // Get the next sibling element, which should be the ul
+                    const nextElement = h2.nextElementSibling;
+
+                    // Check if the next element is a ul
+                    if (nextElement && nextElement.tagName === 'UL') {
+                        // Get all anchor tags inside the ul and add target="_blank"
+                        const anchorTags = nextElement.querySelectorAll('a');
+                        anchorTags.forEach(anchor => {
+                            anchor.setAttribute('target', '_blank');
+                        });
+                    }
+                }
+            });
+        </script>
+        <footer>
+    <div>
+        <div class="left-block">
+            <div class="logo">
+                <a href="/">
+                  <img src="https://sun.com/_astro/logo-white.DuNP12gY_Z22gpAz.svg" 
+                       onerror="this.onerror=null; this.src='https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png'" 
+                       alt="Primary Image" 
+                       height="40" />
+                </a>
+              </div>
+            <div class="copyright">
+                &copy; Copyright 2024, Gracker.
+            </div>
+        </div>
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <ul>
+                    
+                        
+                            <li>
+                                <a href="https://www.linkedin.com/company/gracker-ai/" target="_blank" rel="noopener noreferrer">
+                                    LinkedIn
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://x.com/grackerAI" target="_blank" rel="noopener noreferrer">
+                                    Twitter
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://www.instagram.com/grackerai/" target="_blank" rel="noopener noreferrer">
+                                    Instagram
+                                </a>
+                            </li>
+                            
+                                
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let scrollpos = window.scrollY;
+    const header = document.querySelector("header");
+    const navItems = document.querySelectorAll("nav .menu-item-has-children>a"); // Adjust the selector based on your menu items
+    const navSubItems = document.querySelectorAll("nav .menu-item-has-children .sub-menu.mega-menu"); // Adjust the selector based on your menu items
+
+    const add_class_on_scroll = () => header.classList.add("scroll");
+    const remove_class_on_scroll = () => header.classList.remove("scroll");
+
+    const add_class_on_hover = () => header.classList.add("hover");
+    const remove_class_on_hover = () => header.classList.remove("hover");
+
+    const check_scroll_position = () => {
+        scrollpos = window.scrollY;
+        if (scrollpos >= 80) {
+            add_class_on_scroll();
+        } else {
+            remove_class_on_scroll();
+        }
+    };
+
+    // Add or remove class based on scroll position
+    window.addEventListener("scroll", check_scroll_position);
+
+    // Add class on hover
+    navItems.forEach((item) => {
+        item.addEventListener("mouseenter", add_class_on_hover);
+        item.addEventListener("mouseleave", remove_class_on_hover);
+    });
+
+    // Add class on click
+    // navItems.forEach((item) => {
+    // 	item.addEventListener("click", add_class_on_hover);
+    // });
+
+    // Add class on hover
+    navSubItems.forEach((item) => {
+        item.addEventListener("mouseenter", add_class_on_hover);
+        item.addEventListener("mouseleave", remove_class_on_hover);
+    });
+
+    // Add class on click
+    navSubItems.forEach((item) => {
+        item.addEventListener("click", add_class_on_hover);
+    });
+    // Initial check when the page loads
+    document.addEventListener("DOMContentLoaded", check_scroll_position);
+    window.addEventListener("scroll", check_scroll_position);
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const dropdownButton = document.getElementById("dropdown-button");
+
+        if (dropdownButton) {
+            dropdownButton.addEventListener("click", () => {
+                document.body.classList.toggle("dropdown-open");
+            });
+        }
+    });
+
+    const menu = document.querySelector(".menu");
+    const menuMain = menu.querySelector(".menu-main");
+    const goBack = menu.querySelector(".go-back");
+    const menuTrigger = document.querySelector(".mobile-menu-trigger");
+    const closeMenu = menu.querySelector(".mobile-menu-close");
+    let subMenu;
+    menuMain.addEventListener("click", (e) => {
+        if (!menu.classList.contains("active")) {
+            return;
+        }
+        if (e.target.closest(".menu-item-has-children")) {
+            const hasChildren = e.target.closest(".menu-item-has-children");
+            showSubMenu(hasChildren);
+        }
+    });
+    goBack.addEventListener("click", () => {
+        hideSubMenu();
+    });
+    menuTrigger.addEventListener("click", () => {
+        toggleMenu();
+    });
+    closeMenu.addEventListener("click", () => {
+        toggleMenu();
+    });
+    document.querySelector(".menu-overlay").addEventListener("click", () => {
+        toggleMenu();
+    });
+    function toggleMenu() {
+        menu.classList.toggle("active");
+        document.querySelector(".menu-overlay").classList.toggle("active");
+    }
+    function showSubMenu(hasChildren) {
+        subMenu = hasChildren.querySelector(".sub-menu");
+        subMenu.classList.add("active");
+        subMenu.style.animation = "slideLeft 0.5s ease forwards";
+        const menuTitle =
+            hasChildren.querySelector(".chevronDown").parentNode.childNodes[0].textContent;
+        menu.querySelector(".current-menu-title").innerHTML = menuTitle;
+        menu.querySelector(".mobile-menu-head").classList.add("active");
+    }
+
+    function hideSubMenu() {
+        subMenu.style.animation = "slideRight 0.5s ease forwards";
+        setTimeout(() => {
+            subMenu.classList.remove("active");
+        }, 300);
+        menu.querySelector(".current-menu-title").innerHTML = "";
+        menu.querySelector(".mobile-menu-head").classList.remove("active");
+    }
+
+    window.onresize = function () {
+        if (this.innerWidth > 991) {
+            if (menu.classList.contains("active")) {
+                toggleMenu();
+            }
+        }
+    };
+
+</script>
+
+<script defer>
+    function updateLogoWidth() {
+        // Select elements
+        const ctaElement = document.querySelector('.item-right');
+        const logoElement = document.querySelector('.item-left');
+
+        // Get the computed width of CTA
+        const ctaWidth = ctaElement.getBoundingClientRect().width;
+    
+
+        // Apply the width to logo element
+        if (ctaWidth > 0) {
+            logoElement.style.width = `${ctaWidth}px`;
+        }
+    }
+
+    // Run on page load with a slight delay to ensure styles are applied
+    document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(updateLogoWidth, 100);
+    });
+
+    // Run whenever window is resized
+    window.addEventListener('resize', updateLogoWidth);
+</script>
+</body>
+
+</html>
